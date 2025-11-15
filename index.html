@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little Rainbow Preschool</title>
+    <style>
+        :root {
+            --page-bg: #ffffff;
+            --text-color: #000000;
+            --accent-red: #d32f2f;
+            --header-height: 140px;
+            --max-width: 1100px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--page-bg);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .site-header {
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(90deg,
+                    #ff3b30 0%,
+                    #ff9500 17%,
+                    #ffcc00 33%,
+                    #34c759 50%,
+                    #0a84ff 67%,
+                    #5856d6 83%,
+                    #ff2d55 100%);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .site-header h1 {
+            margin: 0;
+            font-size: clamp(22px, 3.6vw, 36px);
+            letter-spacing: 0.6px;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 32px auto;
+            padding: 0 20px 120px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .left {
+            flex: 1 1 0%;
+            background: transparent;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            min-width: 0;
+        }
+
+        .left h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .left p {
+            margin: 0 0 12px 0;
+            line-height: 1.5;
+        }
+
+        .right {
+            flex: 0 0 320px;
+            max-width: 35%;
+            min-width: 240px;
+            background: var(--accent-red);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .right h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .contact-item {
+            margin: 6px 0;
+            font-size: 15px;
+            word-break: break-word;
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .page-rainbow {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 18px;
+            width: clamp(180px, 28vw, 420px);
+            pointer-events: none;
+            filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+        }
+
+        @media (max-width: 800px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .right {
+                max-width: none;
+                min-width: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Little Rainbow Preschool</h1>
+    </header>
+    <main class="container">
+        <section class="content">
+            <article class="left">
+                <h2>Meet your teacher: Miss Laura</h2>
+                <p>Miss Laura has a bachelor's degree in early childhood education and more than a decade of experience
+                    teaching children from ages 2–10.</p>
+                <p>Miss Laura believes that all children are unique, special, and bright and that, when put together,
+                    they make the world a little brighter — like a rainbow.</p>
+            </article>
+            <aside class="right">
+                <h3>Contact us for more information</h3>
+                <div class="contact-item"><strong>Phone:</strong> <a href="tel:+13859855508">385-985-5508</a></div>
+                <div class="contact-item"><strong>Email:</strong> <a
+                        href="mailto:Alohanlaura89@gmail.com">Alohanlaura89@gmail.com</a></div>
+            </aside>
+        </section>
+    </main>
+    <svg class="page-rainbow" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 100 220 A 300 130 0 0 1 700 220" fill="none" stroke="#FF3B30" stroke-width="48"
+            stroke-linecap="round" />
+        <path d="M 140 220 A 260 110 0 0 1 660 220" fill="none" stroke="#FF9500" stroke-width="40"
+            stroke-linecap="round" />
+        <path d="M 180 220 A 220 90 0 0 1 620 220" fill="none" stroke="#FFCC00" stroke-width="32"
+            stroke-linecap="round" />
+        <path d="M 220 220 A 180 70 0 0 1 580 220" fill="none" stroke="#34C759" stroke-width="26"
+            stroke-linecap="round" />
+        <path d="M 260 220 A 140 50 0 0 1 540 220" fill="none" stroke="#0A84FF" stroke-width="20"
+            stroke-linecap="round" />
+        <path d="M 300 220 A 100 30 0 0 1 500 220" fill="none" stroke="#5856D6" stroke-width="14"
+            stroke-linecap="round" />
+    </svg>
+</body>
+
+</html>
